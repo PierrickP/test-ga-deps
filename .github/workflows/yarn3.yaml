@@ -1,4 +1,4 @@
-name: "[YARN 1] Build Docker image"
+name: "[YARN 3] Build Docker image"
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  yarn_1_build_docker_image:
+  yarn_3_build_docker_image:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,8 +16,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: yarn1/
-          file: yarn1/Dockerfile
+          context: yarn3/
+          file: yarn3/Dockerfile
           pull: true
           push: false
           tags: pierrickp/test-ga-deps

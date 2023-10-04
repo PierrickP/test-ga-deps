@@ -2,7 +2,6 @@
   "name": "test-ga",
   "version": "1.67.0",
   "private": true,
-  "scripts": {},
   "dependencies": {
     "@apollo/client": "3.8.4",
     "@deck.gl/core": "8.9.30",
@@ -102,10 +101,6 @@
     "vite-plugin-vue-devtools": "1.0.0-rc.5",
     "vitest": "0.34.5",
     "vue-i18n-extract": "2.0.7"
-  },
-  "resolutions": {
-    "strip-ansi": "^6.0.1",
-    "string-width": "^4.2.2"
   },
   "overrides": {
     "strip-ansi": "^6.0.1",

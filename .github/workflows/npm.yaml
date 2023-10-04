@@ -16,7 +16,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          file: Dockerfile.npm
+          context: npm/
+          file: npm/Dockerfile
           pull: true
           push: false
           tags: pierrickp/test-ga-deps
