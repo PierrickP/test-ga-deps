@@ -1,0 +1,22 @@
+name: "[YARN 1] Build Docker image"
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  yarn_1_build_docker_image:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          file: Dockerfile
+          pull: true
+          push: false
+          tags: pierrickp/test-ga-deps
